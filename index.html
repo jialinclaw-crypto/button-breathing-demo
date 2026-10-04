@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>按鈕呼吸燈預覽</title>
+  <style>
+    :root { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Noto Sans TC", sans-serif; color: #1c1c1e; background: #fafafa; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: max(24px, env(safe-area-inset-top)) 20px max(32px, env(safe-area-inset-bottom)); }
+    main { max-width: 390px; margin: 0 auto; }
+    h1 { margin: 0 0 6px; font-size: 22px; }
+    .intro { margin: 0 0 25px; color: #666; font-size: 14px; line-height: 1.5; }
+    section { margin: 0 0 27px; }
+    h2 { margin: 0 0 12px; font-size: 16px; }
+    .card { overflow: visible; border: 1px solid #dedee3; border-radius: 18px; background: #f2f2f7; box-shadow: 0 10px 25px rgba(28, 28, 30, .08); }
+    .header { padding: 14px 18px; border-bottom: 1px solid #e5e5ea; border-radius: 18px 18px 0 0; background: #f9f9fb; text-align: center; font-size: 14px; font-weight: 600; }
+    .content { padding: 22px 20px 26px; }
+    .code { margin-bottom: 7px; color: #8e8e93; font-size: 14px; }
+    .title { margin-bottom: 5px; font-weight: 600; }
+    .status { margin-bottom: 25px; color: #0f766e; font-size: 14px; }
+    .demo-button { display: block; width: 100%; min-height: 52px; padding: 12px; border: 0; border-radius: 10px; background: #0d9488; color: white; font: inherit; font-weight: 600; -webkit-tap-highlight-color: transparent; }
+    .halo { animation: halo 2.6s ease-in-out infinite; }
+    .fill { animation: fill 2.6s ease-in-out infinite; }
+    @keyframes halo { 0%, 100% { box-shadow: 0 0 0 0 rgba(13, 148, 136, 0), 0 2px 7px rgba(13, 148, 136, .12); } 50% { box-shadow: 0 0 0 9px rgba(13, 148, 136, .18), 0 0 22px 3px rgba(13, 148, 136, .25); } }
+    @keyframes fill { 0%, 100% { filter: brightness(1); transform: scale(1); box-shadow: 0 2px 7px rgba(13, 148, 136, .12); } 50% { filter: brightness(1.22); transform: scale(1.025); box-shadow: 0 5px 22px rgba(13, 148, 136, .36); } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>按鈕呼吸燈預覽</h1>
+    <p class="intro">下面兩顆按鈕會持續動畫。這只是效果示範，點按不會送出資料。</p>
+    <section aria-labelledby="halo-title">
+      <h2 id="halo-title">① 外圈柔光</h2>
+      <div class="card">
+        <div class="header">點班系統介面示範</div>
+        <div class="content">
+          <div class="code">表單範例</div>
+          <div class="title">設備點檢</div>
+          <div class="status">項目已填寫</div>
+          <button type="button" class="demo-button halo">確認送出</button>
+        </div>
+      </div>
+    </section>
+    <section aria-labelledby="fill-title">
+      <h2 id="fill-title">② 整顆微亮</h2>
+      <div class="card">
+        <div class="header">點班系統介面示範</div>
+        <div class="content">
+          <div class="code">表單範例</div>
+          <div class="title">設備點檢</div>
+          <div class="status">項目已填寫</div>
+          <button type="button" class="demo-button fill">確認送出</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
